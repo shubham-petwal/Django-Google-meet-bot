@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Scheduled Successfully</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #28a745;
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 20px 0;
+        }
+        .features {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background: #e9f7ef;
+            border-left: 5px solid #28a745;
+            border-radius: 5px;
+        }
+        .features h2 {
+            margin: 0 0 10px 0;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .btn {
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meeting Scheduled Successfully!</h1>
+        <p>Your meeting has been scheduled successfully. You will receive a notification with the details of the meeting. After the meeting concludes, a summary and transcription will be available for you to review.</p>
+
+        <div class="features">
+            <h2>Explore More Features:</h2>
+            <ul>
+                <li>Automatic meeting transcription and summaries.</li>
+                <li>Meeting history tracking with detailed insights.</li>
+                <li>Integration with Google Meet for seamless scheduling.</li>
+                <li>Secure storage of meeting data for future reference.</li>
+            </ul>
+        </div>
+
+        <div class="btn-container">
+            <a href="{% url 'meeting_history' %}" class="btn">View Meeting History</a>
+            <a href="/bot" class="btn">Schedule Another Meeting</a>
+        </div>
+    </div>
+</body>
+</html>

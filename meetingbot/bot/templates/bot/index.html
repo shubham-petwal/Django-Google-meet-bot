@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Meet Bot</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body{
+            margin: 0;
+        }
+    .container {
+        display: flex;
+        min-height: 100vh;
+    }
+    </style>
+</head>
+<body >
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="/bot">Home</a></li>
+                <li><a href="#">Start Bot</a></li>
+               <li><a href="{% url 'meeting_history' %}">Meeting History</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <h1>Start a Google Meet Bot</h1>
+            <form method="POST" class="form-container">
+                {% csrf_token %}
+                <label for="link">Google Meet Link:</label>
+                <input type="url" id="link" name="link" required placeholder="Enter meeting link"><br>
+
+                <label for="participant_name">Participant Name:</label>
+                <input type="text" id="participant_name" name="participant_name" required placeholder="Your name"><br>
+
+                <label for="date">Meeting Date:</label>
+                <input type="date" id="date" name="date" required><br>
+            
+                <label for="time">Meeting Time:</label>
+                <input type="time" id="time" name="time" required><br>
+
+                <button type="submit">Start Meeting Bot</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
